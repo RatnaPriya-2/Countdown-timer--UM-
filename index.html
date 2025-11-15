@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link rel="icon" href="./icons8-timer-64.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Main wrapper -->
+    <main class="main-container">
+      <!-- Main functional area -->
+      <section class="main-body">
+        <h1>Countdown Timer</h1>
+
+        <!-- User inputs -->
+        <div class="input-block">
+          <input type="Date" class="date-input" />
+          <input type="Time" class="time-input" />
+        </div>
+
+        <!-- Start button triggers JS countdown -->
+        <button class="start-btn">Start</button>
+
+        <p class="time-remianing">Time Remaining :</p>
+
+        <!-- Display timer values dynamically updated -->
+        <div class="count-down-timer">
+          <div class="days">
+            <p>00</p>
+            <p>Days</p>
+          </div>
+          <span>:</span>
+          <div class="hours">
+            <p>00</p>
+            <p>Hours</p>
+          </div>
+          <span>:</span>
+          <div class="minutes">
+            <p>00</p>
+            <p>Minutes</p>
+          </div>
+          <span>:</span>
+          <div class="seconds">
+            <p>00</p>
+            <p>Seconds</p>
+          </div>
+        </div>
+
+        <!-- Shows the exact target time after user starts -->
+        <p class="target-time">
+          <span>Counting down to:</span>
+          <span class="target-time-display">--:--:--:--:--</span>
+        </p>
+      </section>
+
+      <!-- Error message area -->
+      <aside>
+        <p class="error-message">Please enter date.</p>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
