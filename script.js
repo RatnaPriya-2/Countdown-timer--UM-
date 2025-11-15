@@ -7,6 +7,7 @@ let minutes = document.querySelector(".minutes p:first-of-type"); // First <p> i
 let seconds = document.querySelector(".seconds p:first-of-type"); // First <p> inside .seconds
 let errorMessage = document.querySelector(".error-message"); // Error message container
 let targetTimeDisplay = document.querySelector(".target-time-display"); // Section to show target time
+let audioAlert = document.querySelector("audio"); // Audio element for alert sound
 
 // Add leading zero to single-digit numbers (e.g., 7 -> "07")
 const padZero = (num) => {
@@ -78,13 +79,27 @@ const startCountdown = () => {
     // When countdown ends: stop timer and set all values to 0
     if (remainingTimeInMs <= 0) {
       clearInterval(timeInterval);
-      days.innerText = "0";
-      hours.innerText = "0";
-      minutes.innerText = "0";
-      seconds.innerText = "0";
+      days.innerText = "00";
+      hours.innerText = "00";
+      minutes.innerText = "00";
+      seconds.innerText = "00";
+      audioAlert.play(); // Play alert sound
     }
   }, 1000); // Update every 1 second
 };
 
 // Start countdown when button is clicked
 startButton.addEventListener("click", startCountdown);
+// Button press animation
+
+startButton.addEventListener("mousedown", () => {
+  startButton.classList.add("active");
+});
+
+startButton.addEventListener("mouseup", () => {
+  startButton.classList.remove("active");
+});
+
+startButton.addEventListener("mouseleave", () => {
+  startButton.classList.remove("active");
+});

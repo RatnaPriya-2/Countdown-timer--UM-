@@ -30,7 +30,7 @@
         <!-- Start button triggers JS countdown -->
         <button class="start-btn">Start</button>
 
-        <p class="time-remianing">Time Remaining :</p>
+        <p class="time-remianing">Time Remaining : </p>
 
         <!-- Display timer values dynamically updated -->
         <div class="count-down-timer">
@@ -57,15 +57,16 @@
 
         <!-- Shows the exact target time after user starts -->
         <p class="target-time">
-          <span>Counting down to:</span>
-          <span class="target-time-display">--:--:--:--:--</span>
+          <span>Counting down to : </span>
+          <span class="target-time-display">-- | -- | -- | -- | --</span>
         </p>
       </section>
 
       <!-- Error message area -->
-      <aside>
-        <p class="error-message">Please enter date.</p>
+      <aside class="error-message">
+        <p class="error">Please enter date.</p>
       </aside>
+      <audio src="./chime-alert-demo-309545.mp3" preload="auto"></audio>
     </main>
 
     <script src="script.js"></script>
